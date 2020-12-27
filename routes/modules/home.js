@@ -4,6 +4,10 @@ const router = express.Router()
 
 // 設定路由
 router.get('/', (req, res) => {
+    const userName = req.session.name
+    if (userName) {
+        return res.render('welcome', { userName })
+    }
     res.render('index')
 })
 

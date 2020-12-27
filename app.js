@@ -8,7 +8,18 @@ const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 // 引用mongoose檔
 require('./config/mongoose.js')
+// express -session載入套件
+const session = require('express-session')
 
+app.use(session({
+  secret: 'mySecret',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    domain: `localhost`,
+    maxAge: 60000
+  }
+}))
 
 // 引用路由器
 const routes = require('./routes/index.js')

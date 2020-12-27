@@ -19,6 +19,7 @@ router.post('/', (req, res) => {
             if (validLogin) {
                 const userName = validLogin.firstName
                 res.render('welcome', { userName })
+                req.session.name = userName
             } else {
                 status = Fail
                 res.render('index', { keyword, status })
