@@ -7,6 +7,7 @@
 - 在頁面中輸入Email和密碼進行驗證
 - 若Emarl和密碼錯誤會跳出提示
 - 若Emarl和密碼正確會進入welcome頁面
+- 按下Sign out可登出
 
 ## 環境建置(prerequisites)
 - Node.js v10.15.0
